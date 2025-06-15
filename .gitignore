@@ -1,0 +1,23 @@
+# Dependencies
+# Folder ini berisi ribuan file dan bisa dibuat ulang dengan `npm install`
+/node_modules/
+
+# Compiled assets
+# File ini adalah hasil output dari Tailwind, bisa dibuat ulang dengan `npm run build`
+/assets/css/style.css
+
+# Configuration and sensitive files (Meskipun sudah statis, ini praktik yang baik)
+# Jika Anda punya file config rahasia di masa depan, tambahkan di sini.
+/config/database.php
+
+# Log files
+npm-debug.log*
+yarn-error.log
+yarn-debug.log
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# IDE-specific files
+.vscode/

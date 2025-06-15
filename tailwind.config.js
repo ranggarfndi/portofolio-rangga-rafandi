@@ -3,26 +3,25 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  // --- DIUBAH: Sekarang kita memindai file .html dan file .js di folder data ---
   content: [
-    "./*.php",
-    "./admin/**/*.php",
-    "./partials/**/*.php",
-    "./templates/**/*.php",
-    "./assets/js/**/*.js"
+    "./*.html",
+    "./projects/**/*.html", // Untuk memindai semua halaman detail proyek
+    "./assets/js/**/*.js",
+    "./data/**/*.js"       // Penting, agar kelas di file data juga terbaca
   ],
   theme: {
     extend: {
       fontFamily: {
         sans: ['Poppins', ...defaultTheme.fontFamily.sans],
       },
-      // PALET WARNA BARU "COSMIC GLASS / SUBTLE AURORA"
       colors: {
-        'background': '#070912',      // Biru dongker sangat gelap
-        'surface': 'rgba(15, 18, 32, 0.4)', // Warna kaca yang lebih gelap dan kebiruan, dengan transparansi
-        'primary': '#67E8F9',         // Cyan yang lebih lembut (soft cyan)
-        'secondary': '#C084FC',       // Ungu lavender (soft purple)
-        'tertiary': '#86EFAC',       // Hijau mint (soft green)
-        'muted': '#94A3B8',           // Abu-abu kebiruan yang lebih terang
+        'background': '#070912',
+        'surface': 'rgba(15, 18, 32, 0.4)',
+        'primary': '#67E8F9',
+        'secondary': '#C084FC',
+        'tertiary': '#86EFAC',
+        'muted': '#94A3B8',
       }
     },
   },
