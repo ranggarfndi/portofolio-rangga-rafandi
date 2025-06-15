@@ -1,0 +1,455 @@
+/* tailwind-input.css - Versi Final dengan Aurora Lebih Cepat */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+  /* KOMPONEN KARTU "COSMIC GLASS" */
+  .card-stroke {
+    /* Dibuat lebih transparan dan blur lebih kuat */
+    @apply bg-surface/50 border border-slate-700/50 rounded-2xl p-6 backdrop-blur-lg transition-all duration-500 relative;
+  }
+
+  .card-stroke:hover {
+    /* Efek hover dengan mengembang (scale) dan naik (translateY) */
+    transform: translateY(-8px) scale(1.03);
+    /* Naik sedikit lebih tinggi & membesar 3% */
+    box-shadow: 0 0 45px theme("colors.primary / 20%");
+    /* Sedikit tingkatkan pendaran cahayanya */
+    @apply border-slate-600/50;
+  }
+
+  /* GAYA UNTUK INPUT FORM "COSMIC GLASS" */
+  .input-stroke {
+    @apply w-full bg-surface/70 border border-slate-700/80 rounded-lg p-4 text-white placeholder-muted focus:outline-none;
+    transition: all 0.3s ease;
+  }
+
+  .input-stroke:focus {
+    @apply border-primary/60;
+    box-shadow: 0 0 20px theme("colors.primary / 20%");
+  }
+
+  /* TOMBOL BARU YANG LEBIH ELEGAN */
+  .btn {
+    @apply relative inline-block px-8 py-3 font-bold text-white rounded-full transition-all duration-300 overflow-hidden;
+    /* Gradien dengan warna baru yang lebih lembut */
+    background: linear-gradient(to right,
+        theme("colors.primary"),
+        theme("colors.secondary"));
+    border: 1px solid theme("colors.primary / 20%");
+  }
+
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px -10px theme("colors.secondary / 30%");
+  }
+
+  /* GAYA NAV-LINK YANG DISEMPURNAKAN DENGAN WARNA BARU */
+  .nav-link {
+    @apply relative text-muted transition-colors duration-300 hover:text-white;
+  }
+
+  .nav-link::after {
+    content: "";
+    @apply absolute -bottom-1 left-0 h-[2px] w-0 transition-all duration-300;
+    background: linear-gradient(to right,
+        theme("colors.primary"),
+        theme("colors.secondary"));
+  }
+
+  .nav-link:hover::after,
+  .nav-link-active::after {
+    @apply w-full;
+  }
+
+  .nav-link-active {
+    @apply text-white;
+  }
+
+  /* -- GAYA BARU UNTUK NAVBAR COSMIC -- */
+  .navbar-cosmic {
+    /* Blur dikurangi dari xl menjadi md, latar sedikit lebih transparan */
+    @apply bg-surface/50 backdrop-blur-md relative;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* Saat navbar di-scroll (kelas .navbar-scrolled ditambahkan oleh JS) */
+  .navbar-scrolled.navbar-cosmic {
+    /* Saat di-scroll, latar menjadi sedikit lebih pekat dan ada bayangan lembut */
+    @apply bg-surface/70;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  /* -- GAYA BARU UNTUK IKON TEKNOLOGI -- */
+  .tech-icon {
+    @apply bg-slate-800/60 border border-slate-700/80 p-2 rounded-lg flex items-center gap-2 text-sm font-medium text-muted transition-all duration-300 cursor-default;
+  }
+
+  .tech-icon:hover {
+    @apply bg-slate-700/80 border-slate-600 -translate-y-1 text-white;
+    box-shadow: 0 0 15px theme("colors.primary / 10%");
+  }
+
+  .tech-icon img {
+    @apply h-5 w-5;
+  }
+
+  /* -- GAYA BARU UNTUK KARTU PRINSIP -- */
+  .principle-card {
+    @apply bg-surface/50 border border-slate-700/50 rounded-xl p-4 text-center transition-all duration-300;
+  }
+
+  .principle-card:hover {
+    @apply -translate-y-2 bg-surface/80 border-slate-600;
+    box-shadow: 0 0 25px theme("colors.primary / 15%");
+  }
+
+  .icon-wrapper {
+    @apply w-14 h-14 mx-auto rounded-full flex items-center justify-center bg-slate-800/70 border border-slate-700 text-primary;
+  }
+
+  /* -- GAYA BARU UNTUK TOMBOL SEKUNDER -- */
+  .btn-secondary {
+    @apply relative inline-block px-8 py-3 font-bold text-primary rounded-full transition-all duration-300 overflow-hidden border border-primary/50;
+  }
+
+  .btn-secondary:hover {
+    @apply bg-primary/10 text-white border-primary;
+    box-shadow: 0 0 20px theme("colors.primary / 20%");
+    transform: translateY(-2px);
+  }
+
+  /* -- GAYA BARU UNTUK KARTU KONTAK -- */
+  .contact-card {
+    @apply bg-surface/50 border border-slate-700/50 rounded-2xl p-6 flex flex-col items-center justify-center text-center transition-all duration-300;
+  }
+
+  .contact-card:hover {
+    @apply -translate-y-2 bg-surface/80 border-primary/40;
+    box-shadow: 0 0 35px theme("colors.primary / 20%");
+  }
+
+  .icon-wrapper-contact {
+    @apply w-20 h-20 mb-4 rounded-full flex items-center justify-center bg-slate-800/70 border-2 border-slate-700 text-primary transition-all duration-300;
+  }
+
+  .contact-card:hover {
+    @apply bg-surface/80 border-primary/40;
+    /* DIUBAH: Menambahkan scale(1.05) untuk efek mengembang */
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 0 35px theme('colors.primary / 20%');
+  }
+
+  /* -- GAYA BARU UNTUK IKON SOSMED DI FOOTER -- */
+    .social-icon {
+        @apply text-muted transition-all duration-300;
+    }
+    .social-icon:hover {
+        @apply text-primary scale-125 -translate-y-1;
+    }
+
+    /* GAYA BARU UNTUK INPUT FILE DI ADMIN */
+    .input-file-custom {
+        @apply w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary/20 file:text-primary hover:file:bg-primary/30 text-muted cursor-pointer;
+    }
+}
+
+/* -- KODE BARU UNTUK EFEK AURORA LEBIH ORGANIK -- */
+
+#aurora-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+}
+
+#aurora-background::before,
+#aurora-background::after,
+#aurora-background span::before,
+#aurora-background span::after {
+  content: "";
+  position: absolute;
+  opacity: 0.25;
+  /* Opasitas sedikit diturunkan untuk blending yang lebih baik */
+  filter: blur(120px);
+  /* Blur sedikit ditingkatkan untuk efek lebih halus */
+  will-change: transform;
+}
+
+/* Gumpalan cahaya 1 (Hijau) */
+#aurora-background::before {
+  background: radial-gradient(circle, #4ade80, transparent 60%);
+  width: 60vw;
+  height: 50vw;
+  top: 5%;
+  left: -10%;
+  border-radius: 47% 53% 70% 30% / 30% 50% 50% 70%;
+  /* Bentuk tidak beraturan */
+  animation: aurora1 18s linear infinite alternate;
+}
+
+/* Gumpalan cahaya 2 (Ungu) */
+#aurora-background::after {
+  background: radial-gradient(circle, #a855f7, transparent 60%);
+  width: 55vw;
+  height: 65vw;
+  top: 40%;
+  left: 50%;
+  border-radius: 65% 35% 38% 62% / 56% 60% 40% 44%;
+  /* Bentuk tidak beraturan */
+  animation: aurora2 22s linear infinite alternate;
+}
+
+/* Gumpalan cahaya 3 (Biru Langit) dari Span pertama */
+#aurora-background span:nth-child(1)::before {
+  background: radial-gradient(circle, #38bdf8, transparent 60%);
+  width: 50vw;
+  height: 50vw;
+  top: 15%;
+  left: 70%;
+  border-radius: 35% 65% 51% 49% / 45% 42% 58% 55%;
+  /* Bentuk tidak beraturan */
+  animation: aurora3 28s linear infinite alternate;
+}
+
+/* Gumpalan cahaya 4 (Pink/Magenta) dari Span pertama */
+#aurora-background span:nth-child(1)::after {
+  background: radial-gradient(circle, #ec4899, transparent 60%);
+  width: 60vw;
+  height: 45vw;
+  top: 65%;
+  left: 5%;
+  border-radius: 46% 54% 45% 55% / 54% 53% 47% 46%;
+  /* Bentuk tidak beraturan */
+  animation: aurora4 20s linear infinite alternate;
+}
+
+/* Gumpalan cahaya 5 (Kuning/Emas) dari Span kedua - BARU */
+#aurora-background span:nth-child(2)::before {
+  background: radial-gradient(circle, #facc15, transparent 60%);
+  width: 40vw;
+  height: 55vw;
+  top: 80%;
+  left: 80%;
+  border-radius: 54% 46% 63% 37% / 37% 44% 56% 63%;
+  /* Bentuk tidak beraturan */
+  animation: aurora5 24s linear infinite alternate;
+}
+
+/* Gumpalan cahaya 6 (Oranye) dari Span kedua - BARU */
+#aurora-background span:nth-child(2)::after {
+  background: radial-gradient(circle, #f97316, transparent 60%);
+  width: 50vw;
+  height: 50vw;
+  top: -10%;
+  left: 40%;
+  border-radius: 41% 59% 55% 45% / 54% 58% 42% 46%;
+  /* Bentuk tidak beraturan */
+  animation: aurora6 26s linear infinite alternate;
+}
+
+/* -- KEYFRAMES UNTUK ANIMASI -- */
+
+@keyframes aurora1 {
+  to {
+    transform: translate(30vw, 40vh) rotate(15deg) scale(1.2);
+  }
+}
+
+@keyframes aurora2 {
+  to {
+    transform: translate(-40vw, -30vh) rotate(-20deg) scale(0.9);
+  }
+}
+
+@keyframes aurora3 {
+  to {
+    transform: translate(-60vw, 25vh) rotate(25deg) scale(1.1);
+  }
+}
+
+@keyframes aurora4 {
+  to {
+    transform: translate(30vw, -35vh) rotate(-10deg) scale(1);
+  }
+}
+
+@keyframes aurora5 {
+  to {
+    transform: translate(-35vw, -45vh) rotate(30deg) scale(1.2);
+  }
+}
+
+@keyframes aurora6 {
+  to {
+    transform: translate(45vw, 35vh) rotate(-5deg) scale(0.8);
+  }
+}
+
+@layer base {
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* -- KODE BARU UNTUK ANIMASI HERO SECTION -- */
+
+.cosmic-rings {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cosmic-rings .ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  animation: rotate-ring 15s linear infinite;
+}
+
+.cosmic-rings .ring:nth-child(1) {
+  width: 100%;
+  height: 100%;
+  border-top-color: theme("colors.primary");
+  animation-duration: 15s;
+}
+
+.cosmic-rings .ring:nth-child(2) {
+  width: 80%;
+  height: 80%;
+  border-right-color: theme("colors.secondary");
+  animation-direction: reverse;
+  animation-duration: 12s;
+}
+
+.cosmic-rings .ring:nth-child(3) {
+  width: 60%;
+  height: 60%;
+  border-bottom-color: theme("colors.tertiary");
+  animation-duration: 20s;
+}
+
+@keyframes rotate-ring {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* -- KODE BARU UNTUK INDIKATOR SCROLL -- */
+
+.mouse-scroll {
+  width: 28px;
+  height: 48px;
+  border: 2px solid theme("colors.muted / 50%");
+  border-radius: 14px;
+  position: relative;
+  cursor: pointer;
+}
+
+.mouse-scroll::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: theme("colors.muted / 80%");
+  position: absolute;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scroll-indicator 2s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@keyframes scroll-indicator {
+  0% {
+    top: 8px;
+    opacity: 1;
+  }
+
+  50% {
+    top: 20px;
+    opacity: 1;
+  }
+
+  100% {
+    top: 30px;
+    opacity: 0;
+  }
+}
+
+/* -- KODE BARU UNTUK EFEK HOLD PADA COSMIC RINGS -- */
+
+/* Transisi tambahan untuk efek mengembang yang lebih halus */
+.cosmic-rings {
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  position: relative;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cosmic-rings .ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  animation: rotate-ring 15s linear infinite;
+  /* TAMBAHKAN INI: Transisi halus untuk warna dan glow */
+  transition: border-color 0.5s ease, filter 0.5s ease;
+}
+
+/* Duplikasi aturan dari sebelumnya, tidak ada yang berubah di sini */
+.cosmic-rings .ring:nth-child(1) {
+  width: 100%;
+  height: 100%;
+  border-top-color: theme("colors.primary");
+  animation-duration: 15s;
+}
+
+.cosmic-rings .ring:nth-child(2) {
+  width: 80%;
+  height: 80%;
+  border-right-color: theme("colors.secondary");
+  animation-direction: reverse;
+  animation-duration: 12s;
+}
+
+.cosmic-rings .ring:nth-child(3) {
+  width: 60%;
+  height: 60%;
+  border-bottom-color: theme("colors.tertiary");
+  animation-duration: 20s;
+}
+
+.cosmic-rings.is-held {
+  transform: scale(1.15);
+}
+
+.cosmic-rings.is-held .ring {
+  animation-duration: 3s !important;
+  /* TAMBAHKAN INI: Efek glow menggunakan filter dan CSS Variable */
+  /* Variabel --ring-glow-color akan diisi oleh JavaScript */
+  filter: drop-shadow(0 0 8px var(--ring-glow-color, transparent));
+}
+
+@keyframes rotate-ring {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

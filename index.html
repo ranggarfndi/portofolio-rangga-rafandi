@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Rangga Rafandi</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="bg-background text-white font-sans">
+
+    <div id="aurora-background"><span></span><span></span></div>
+
+    <nav id="navbar" class="navbar-cosmic fixed top-0 left-0 w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+
+                <div data-aos="fade-down">
+                    <a href="#hero" class="text-2xl font-bold text-white">
+                        RR<span class="text-primary">.</span>
+                    </a>
+                </div>
+
+                <ul class="hidden md:flex items-center space-x-8">
+                    <li data-aos="fade-down" data-aos-delay="100"><a href="#about" class="nav-link">Tentang</a></li>
+                    <li data-aos="fade-down" data-aos-delay="200"><a href="#projects" class="nav-link">Proyek</a></li>
+                    <!-- <li data-aos="fade-down" data-aos-delay="300"><a href="#contact" class="nav-link">Kontak</a></li> -->
+                    <li data-aos="fade-down" data-aos-delay="400">
+                        <a href="#contact" class="btn-secondary text-sm">Hubungi Saya</a>
+                    </li>
+                </ul>
+
+                <div class="md:hidden">
+                    <button id="hamburger-button" class="text-white focus:outline-none">
+                        <svg id="hamburger-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                        <svg id="hamburger-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-surface/95 backdrop-blur-lg">
+            <ul class="flex flex-col items-center py-4 space-y-4">
+                <li><a href="#about" class="nav-link">Tentang</a></li>
+                <li><a href="#projects" class="nav-link">Proyek</a></li>
+                <li><a href="#contact" class="nav-link">Kontak</a></li>
+                <li><a href="#contact" class="btn mt-2">Sewa Saya</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="hero" class="min-h-screen w-full flex items-center justify-center px-4 pt-24 pb-12 relative">
+
+            <div data-aos="fade-up">
+
+                <div class="card-stroke w-full max-w-5xl">
+                    <div class="flex flex-col md:flex-row gap-8 items-center">
+
+                        <div class="w-full text-center md:text-left">
+                            <p class="font-semibold text-primary mb-2">Web Developer</p>
+                            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+                                Rangga Rafandi
+                            </h1>
+                            <div class="mt-4 h-8">
+                                <p class="text-lg md:text-xl text-muted">
+                                    <span id="typing-effect"></span>
+                                </p>
+                            </div>
+                            <p class="mt-4 text-gray-400 leading-relaxed max-w-lg mx-auto md:mx-0">
+                                Seorang Web Developer dengan fokus pada pengembangan aplikasi yang fungsional, intuitif,
+                                dan memberikan pengalaman pengguna yang luar biasa.
+                            </p>
+                            <div class="mt-8">
+                                <a href="#projects" class="btn-secondary">
+                                    Lihat Karya Saya
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="w-full flex items-center justify-center mt-8 md:mt-0">
+                            <div class="cosmic-rings w-[200px] h-[200px] md:w-[250px] md:h-[250px]">
+                                <div class="ring"></div>
+                                <div class="ring"></div>
+                                <div class="ring"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 hidden sm:block">
+                <a href="#about" aria-label="Scroll to next section">
+                    <div class="mouse-scroll"></div>
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="py-24">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Tentang Saya</h2>
+                    <p class="text-muted mt-2">Perkenalan singkat tentang perjalanan saya di dunia digital.</p>
+                </div>
+
+                <div data-aos="zoom-in-up">
+                    <div class="card-stroke max-w-6xl mx-auto">
+                        <div class="grid md:grid-cols-5 gap-8 md:gap-12 items-start">
+
+                            <div class="md:col-span-2">
+                                <div class="p-2 border border-slate-700/50 rounded-lg">
+                                    <img src="assets/images/profile.jpg" alt="Foto Rangga Rafandi"
+                                        class="w-full h-auto rounded-md">
+                                </div>
+                            </div>
+
+                            <div class="md:col-span-3 flex flex-col gap-10">
+
+                                <div>
+                                    <h3 class="text-2xl font-bold text-white mb-3">Web Developer & Problem Solver</h3>
+                                    <p class="text-muted leading-relaxed">
+                                        Saya adalah seorang web developer yang bersemangat dalam membangun aplikasi web
+                                        yang fungsional dan intuitif. Dengan pengalaman dalam teknologi backend dan
+                                        frontend, saya selalu antusias untuk belajar hal baru dan menghadapi tantangan
+                                        dalam pengembangan proyek.
+                                    </p>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                    <div class="principle-card">
+                                        <div class="icon-wrapper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.898 20.572L16.5 21.75l-.398-1.178a3.375 3.375 0 00-2.3-2.3L12.75 18l1.178-.398a3.375 3.375 0 002.3-2.3L16.5 14.25l.398 1.178a3.375 3.375 0 002.3 2.3l1.178.398-1.178.398a3.375 3.375 0 00-2.3 2.3z" />
+                                            </svg>
+                                        </div>
+                                        <h4 class="text-lg font-bold text-white mt-3">Desain Intuitif</h4>
+                                        <p class="text-sm text-muted mt-1">Fokus pada pengalaman pengguna yang mudah dan
+                                            menyenangkan.</p>
+                                    </div>
+                                    <div class="principle-card">
+                                        <div class="icon-wrapper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+                                            </svg>
+                                        </div>
+                                        <h4 class="text-lg font-bold text-white mt-3">Kode Bersih</h4>
+                                        <p class="text-sm text-muted mt-1">Kode yang terstruktur, mudah dibaca, dan
+                                            efisien untuk masa depan.</p>
+                                    </div>
+                                    <div class="principle-card">
+                                        <div class="icon-wrapper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                                            </svg>
+                                        </div>
+                                        <h4 class="text-lg font-bold text-white mt-3">Performa Optimal</h4>
+                                        <p class="text-sm text-muted mt-1">Membangun aplikasi yang cepat, responsif, dan
+                                            tidak membebani.</p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h4 class="text-lg font-semibold text-white mb-3">Teknologi Utama:</h4>
+                                    <div id="about-tech-icons" class="flex flex-wrap gap-3">
+                                    </div>
+                                </div>
+
+                                <div class="pt-2">
+                                    <a href="https://drive.google.com/file/d/1AlYbutt9Fbs8qLK1v6NWWEsT3IS6TDLK/view?usp=sharing"
+                                        target="_blank" class="btn-secondary">
+                                        Lihat CV
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-24">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-20" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Proyek Terbaru Saya</h2>
+                    <p class="text-muted mt-2">Beberapa karya yang pernah saya bangun dengan dedikasi.</p>
+                </div>
+                <div id="projects-container" class="flex flex-col gap-16 max-w-6xl mx-auto">
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-24">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Hubungi Saya</h2>
+                    <p class="text-muted mt-2">Mari terhubung! Saya siap untuk berdiskusi tentang proyek atau peluang
+                        berikutnya.</p>
+                </div>
+
+                <div class="max-w-4xl mx-auto">
+                    <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+
+                        <div data-aos="fade-up" data-aos-delay="100">
+                            <a href="mailto:ranggarafandi010703@gmail.com" target="_blank" class="contact-card group">
+                                <div class="icon-wrapper-contact">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        class="w-8 h-8">
+                                        <path
+                                            d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                                        <path
+                                            d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+                                    </svg>
+                                </div>
+                                <span class="font-bold text-white text-sm sm:text-base">Email</span>
+                                <span
+                                    class="text-xs sm:text-sm text-primary group-hover:text-secondary transition-colors">Kirim
+                                    Pesan</span>
+                            </a>
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-delay="200">
+                            <a href="https://linkedin.com/in/ranggarfndi" target="_blank" class="contact-card group">
+                                <div class="icon-wrapper-contact">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        class="w-8 h-8">
+                                        <path
+                                            d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.25 6.5 1.75 1.75 0 016.5 8.25zM19 19h-3v-4.75c0-1.4-1.2-2.5-2.5-2.5S11 12.85 11 14.25V19h-3v-9h2.9v1.3a3.11 3.11 0 012.6-1.3c2.2 0 4 1.8 4 4z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <span class="font-bold text-white text-sm sm:text-base">LinkedIn</span>
+                                <span
+                                    class="text-xs sm:text-sm text-primary group-hover:text-secondary transition-colors">Hubungkan</span>
+                            </a>
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-delay="300">
+                            <a href="https://github.com/ranggarfndi" target="_blank" class="contact-card group">
+                                <div class="icon-wrapper-contact">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        class="w-8 h-8">
+                                        <path fill-rule="evenodd"
+                                            d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <span class="font-bold text-white text-sm sm:text-base">GitHub</span>
+                                <span
+                                    class="text-xs sm:text-sm text-primary group-hover:text-secondary transition-colors">Lihat
+                                    Kode</span>
+                            </a>
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-delay="400">
+                            <a href="https://instagram.com/ranggarfndi" target="_blank" class="contact-card group">
+                                <div class="icon-wrapper-contact">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.703.01 5.556 0 5.829 0 8s.01 2.444.048 3.297c.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.556 15.99 5.829 16 8 16s2.444-.01 3.297-.048c.852-.04 1.433-.174 1.942-.372.526-.205.972-.478 1.417-.923.445-.444.718-.891.923-1.417.198-.51.333-1.09.372-1.942C15.99 10.444 16 10.171 16 8s-.01-2.444-.048-3.297c-.04-.852-.174-1.433-.372-1.942a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.09-.333-1.942-.372C10.444.01 10.171 0 8 0zm0 1.442c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.282.24.705.275 1.486.039.843.047 1.096.047 3.232s-.008 2.389-.047 3.232c-.035.78-.166 1.204-.275 1.486a2.5 2.5 0 0 1-.598.92c-.28.28-.546.453-.92.598-.282.11-.705.24-1.486.275-.843.039-1.096.047-3.232.047s-2.389-.008-3.232-.047c-.78-.035-1.204-.166-1.486-.275a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.598-.92c-.11-.282-.24-.705-.275-1.486-.039-.843-.047-1.096-.047-3.232s.008-2.389.047-3.232c.035-.78.166-1.204.275 1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.486-.275.843-.039 1.096.047 3.232-.047zM8 4.865a3.135 3.135 0 1 0 0 6.27 3.135 3.135 0 0 0 0-6.27zM8 12.5a1.694 1.694 0 1 1 0-3.389 1.694 1.694 0 0 1 0 3.389zm4.365-5.912a.865.865 0 1 1-1.223-1.223.865.865 0 0 1 1.223 1.223z" />
+                                    </svg>
+                                </div>
+                                <span class="font-bold text-white text-sm sm:text-base">Instagram</span>
+                                <span
+                                    class="text-xs sm:text-sm text-primary group-hover:text-secondary transition-colors">Lihat
+                                    Galeri</span>
+                            </a>
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-delay="500">
+                            <a href="https://wa.me/6282363546207" target="_blank" class="contact-card group">
+                                <div class="icon-wrapper-contact">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.1-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                                    </svg>
+                                </div>
+                                <span class="font-bold text-white text-sm sm:text-base">WhatsApp</span>
+                                <span
+                                    class="text-xs sm:text-sm text-primary group-hover:text-secondary transition-colors">Pesan
+                                    Cepat</span>
+                            </a>
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-delay="600" class="lg:col-span-1">
+                            <div class="contact-card group h-full">
+                                <div class="icon-wrapper-contact">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                                    </svg>
+                                </div>
+                                <span class="font-bold text-white text-sm sm:text-base">Lokasi</span>
+                                <span class="text-xs sm:text-sm text-muted">Medan, Indonesia</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-surface/60 border-t border-slate-700/50 pt-16 pb-8">
+        <div class="container mx-auto px-4">
+
+            <div class="flex flex-col items-center text-center gap-8">
+
+                <div class="space-y-3">
+                    <a href="#hero" class="inline-block text-3xl font-bold text-white">
+                        RR<span class="text-primary">.</span>
+                    </a>
+                    <p class="text-muted text-sm max-w-xs">
+                        Sebuah portofolio digital untuk menampilkan karya dan keahlian saya dalam pengembangan web.
+                    </p>
+                </div>
+
+                <div>
+                    <ul class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+                        <li><a href="#about" class="font-medium text-muted hover:text-primary transition-colors">Tentang
+                                Saya</a></li>
+                        <li><a href="#projects"
+                                class="font-medium text-muted hover:text-primary transition-colors">Proyek</a></li>
+                        <li><a href="#contact"
+                                class="font-medium text-muted hover:text-primary transition-colors">Hubungi Saya</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="flex justify-center flex-wrap gap-5">
+                        <a href="mailto:ranggarafandi010703@gmail.com" target="_blank" class="social-icon"
+                            aria-label="Email">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="w-6 h-6">
+                                <path
+                                    d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                                <path
+                                    d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/6282363546207" target="_blank" class="social-icon" aria-label="WhatsApp">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.1-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                            </svg>
+                        </a>
+                        <a href="https://github.com/ranggarfndi" target="_blank" class="social-icon"
+                            aria-label="GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="w-6 h-6">
+                                <path fill-rule="evenodd"
+                                    d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/in/ranggarfndi" target="_blank" class="social-icon"
+                            aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="w-6 h-6">
+                                <path
+                                    d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.25 6.5 1.75 1.75 0 016.5 8.25zM19 19h-3v-4.75c0-1.4-1.2-2.5-2.5-2.5S11 12.85 11 14.25V19h-3v-9h2.9v1.3a3.11 3.11 0 012.6-1.3c2.2 0 4 1.8 4 4z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com/ranggarfndi" target="_blank" class="social-icon"
+                            aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.703.01 5.556 0 5.829 0 8s.01 2.444.048 3.297c.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.556 15.99 5.829 16 8 16s2.444-.01 3.297-.048c.852-.04 1.433-.174 1.942-.372.526-.205.972-.478 1.417-.923.445-.444.718-.891.923-1.417.198-.51.333-1.09.372-1.942C15.99 10.444 16 10.171 16 8s-.01-2.444-.048-3.297c-.04-.852-.174-1.433-.372-1.942a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.09-.333-1.942-.372C10.444.01 10.171 0 8 0zm0 1.442c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.282.24.705.275 1.486.039.843.047 1.096.047 3.232s-.008 2.389-.047 3.232c-.035.78-.166 1.204-.275 1.486a2.5 2.5 0 0 1-.598.92c-.28.28-.546.453-.92.598-.282.11-.705.24-1.486.275-.843.039-1.096.047-3.232.047s-2.389-.008-3.232-.047c-.78-.035-1.204-.166-1.486-.275a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.598-.92c-.11-.282-.24-.705-.275-1.486-.039-.843-.047-1.096-.047-3.232s.008-2.389.047-3.232c.035-.78.166-1.204.275 1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.486-.275.843-.039 1.096.047 3.232-.047zM8 4.865a3.135 3.135 0 1 0 0 6.27 3.135 3.135 0 0 0 0-6.27zM8 12.5a1.694 1.694 0 1 1 0-3.389 1.694 1.694 0 0 1 0 3.389zm4.365-5.912a.865.865 0 1 1-1.223-1.223.865.865 0 0 1 1.223 1.223z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-16 pt-8 border-t border-slate-700/50 text-center">
+                <p class="text-muted text-sm">&copy;
+                    <?php echo date("Y"); ?> Rangga Rafandi. Dibuat dengan <span class="text-secondary">&hearts;</span>
+                    di Medan.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="data/projects.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 50,
+        });
+    </script>
+</body>
+
+</html>
